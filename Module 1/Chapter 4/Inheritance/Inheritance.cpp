@@ -8,10 +8,13 @@ using namespace std;
 
 int main()
 {
-    Vehicle* v1 = new Vehicle();
+    unique_ptr<Vehicle> v1( new Vehicle());
     v1->Drive(10);
     cout << v1->getDistance() << endl;
-    delete v1;
+    //Objects of Unique pointer will be deleted once it goes out of scope
+    //Cannot have another pointer pointing to the object of the unique pointer
+    //Ref: https://www.internalpointers.com/post/beginner-s-look-smart-pointers-modern-c
+    //delete v1;
 
     cout << endl << endl;
 
@@ -26,6 +29,9 @@ int main()
     v2->Drive(20);
     cout << v2->getDistance() << endl;
     delete v2;
+
+    cout << "Attempted to access c1 after deleting 2nd pointer to address" << endl;
+    cout << c1->getDistance() << endl;
 
     cout << endl << endl;
 
