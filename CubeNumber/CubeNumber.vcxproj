@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4824b085-d720-4b9d-94fa-e04969fed6de}</ProjectGuid>
-    <RootNamespace>CGSpectrumChallenges</RootNamespace>
+    <ProjectGuid>{d3f326c9-71c1-4397-95b7-1c72b42e55d6}</ProjectGuid>
+    <RootNamespace>CubeNumber</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CGSpectrumChallenges.cpp" />
+    <ClCompile Include="CubeNumber.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
