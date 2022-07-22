@@ -29,6 +29,7 @@ int main()
     v2->Drive(20);
     cout << v2->getDistance() << endl;
     delete v2;
+    v2 = nullptr;
 
     cout << "Attempted to access c1 after deleting 2nd pointer to address" << endl;
     cout << c1->getDistance() << endl;
@@ -40,6 +41,7 @@ int main()
     b1->Drive(30);
     cout << b1->getDistance() << endl;
     delete b1;
+    b1 = nullptr;
 
     cout << endl << endl;
 
@@ -47,6 +49,7 @@ int main()
     a1->Drive(10);
     cout << a1->getDistance() << endl;
     delete a1;
+    a1 = nullptr;
 
     cout << endl << endl;
 
