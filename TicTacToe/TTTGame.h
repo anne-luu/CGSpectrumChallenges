@@ -19,10 +19,12 @@ enum class WASD : unsigned short
 	D
 };
 
+constexpr int gridSize = 3;
+
 class TTTGame
 {
 	Position cursor;
-	TTTCell* grid[3][3];
+	TTTCell* grid[gridSize][gridSize];
 	bool cursorVisibility;
 	const char playerInput;
 	char opponentInput;

@@ -16,6 +16,7 @@ TTTGame::TTTGame(char input)
 	cursor.x = 1;
 	cursor.y = 1;
 
+	//Set the opponent to use the other choice
 	if (playerInput == 'o')
 		opponentInput = 'x';
 	else
@@ -115,24 +116,30 @@ void TTTGame::EnterInput(char input)
 
 bool TTTGame::CheckWin(bool forPlayer)
 {
-	bool hasWon = true;
+	int count = 0;
 
 	//Check Vertical
 	for (int i = 0; i < 3; i++)
 	{
-		if ((*grid[i][cursor.x]).value != playerInput)
-			return false;
+		if ((*grid[i][cursor.x]).value == playerInput)
+			count++;
 	}
+
+	if (count == 3)
+		return true;
+
+	//Reset counter
+	count = 0;
 
 	//Check Horizontal
-	if (!hasWon)
+	for (int i = 0; i < 3; i++)
 	{
-		for (int i = 0; i < 3; i++)
-		{
-			if ((*grid[cursor.y][i]).value != playerInput)
-				return false;
-		}
+		if ((*grid[cursor.y][i]).value == playerInput)
+			count++;
 	}
+	
+	if (count == 3)
+		return true;
 
-	return hasWon;
+	return false;
 }
