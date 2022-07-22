@@ -56,6 +56,12 @@ int main()
         system("cls");
 
         game->Draw();
+
+        if (game->HasWon())
+        {
+            cout << "You win!!" << endl;
+            quit = true;
+        }
     }
 
     return 0;

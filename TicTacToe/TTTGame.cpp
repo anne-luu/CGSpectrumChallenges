@@ -3,6 +3,7 @@
 TTTGame::TTTGame(char input)
 	:cursorVisibility(true)
 	,playerInput(input)
+	,won(false)
 {
 	//Initialize array to ' '
 	for (int i = 0; i < 3; i++)
@@ -66,9 +67,10 @@ void TTTGame::XOInput(char xoInput)
 	//Check if current cell has a value
 	if ((*grid[cursor.y][cursor.x]).value == ' ')
 	{
-		if (xoInput == 'x')
+		//Place char only if it matches the playerInput
+		if (xoInput == 'x' && playerInput == 'x')
 			(*grid[cursor.y][cursor.x]).value = 'x';
-		else if (xoInput == 'o')
+		else if (xoInput == 'o' && playerInput == 'o')
 			(*grid[cursor.y][cursor.x]).value = 'o';
 	}
 }
@@ -103,9 +105,34 @@ void TTTGame::EnterInput(char input)
 	case 'x':
 	case 'o':
 		XOInput(input);
+		won = CheckWin(true);
 		break;
 	case 'h':
 		ToggleCursorVisibility();
 		break;
 	}
+}
+
+bool TTTGame::CheckWin(bool forPlayer)
+{
+	bool hasWon = true;
+
+	//Check Vertical
+	for (int i = 0; i < 3; i++)
+	{
+		if ((*grid[i][cursor.x]).value != playerInput)
+			return false;
+	}
+
+	//Check Horizontal
+	if (!hasWon)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			if ((*grid[cursor.y][i]).value != playerInput)
+				return false;
+		}
+	}
+
+	return hasWon;
 }

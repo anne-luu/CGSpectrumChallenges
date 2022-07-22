@@ -26,6 +26,7 @@ class TTTGame
 	bool cursorVisibility;
 	const char playerInput;
 	char opponentInput;
+	bool won;
 
 public:
 	TTTGame(char input);
@@ -34,6 +35,12 @@ public:
 	void XOInput(char xoInput);
 	void ToggleCursorVisibility();
 	void EnterInput(char input);
-	void CheckWin();
+	bool CheckWin(bool forPlayer);
+
+	//Getter
+	bool HasWon()
+	{
+		return won;
+	}
 };
 
