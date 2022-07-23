@@ -24,6 +24,8 @@ constexpr int gridSize = 3;
 class TTTGame
 {
 	Position cursor;
+	// My only comment is you don't need to have an array of pointer to TTTCell and have to delete it from the heap
+	// You can do TTTCell grid[gridSize][gridSize], and it will create of 2D array of type TTTCell
 	TTTCell* grid[gridSize][gridSize];
 	bool cursorVisibility;
 	const char playerInput;
