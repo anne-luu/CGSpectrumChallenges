@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 1", "Chapter 1", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extra", "Extra", "{2E5BA904-C03D-46C7-A6B1-6A902E02AA15}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExtraPointerChallenge", "ExtraPointerChallenge\ExtraPointerChallenge.vcxproj", "{3AE6B0B4-73E3-4C4A-9BD7-F4265AB9EFAE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExtraPointerChallenge", "Module 2\Extra\ExtraPointerChallenge\ExtraPointerChallenge.vcxproj", "{3AE6B0B4-73E3-4C4A-9BD7-F4265AB9EFAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
