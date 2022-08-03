@@ -24,6 +24,9 @@ int main()
         arr.push_back(inputNum);
     }
     float max = arr.front();
+    // You can write this easier in C++ 11 with range for
+    // https://www.math.ucla.edu/~akrieger/teaching/19w/pic10c/vector.html
+    // for (auto& a : arr)
     for (int i = 1; i < (int)arr.size(); i++)
     {
         if (max < arr.at(i))
